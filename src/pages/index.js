@@ -2,13 +2,13 @@ import React from "react";
 import Layout from "../components/Layout";
 import SimpleHero from "../components/SimpleHero";
 import Banner from "../components/Banner";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 import About from "../components/Home/About";
 import Services from "../components/Home/Services";
 
-export default () => (
+export default ({ data }) => (
   <Layout>
-    <SimpleHero>
+    <SimpleHero home="true" img={data.homeImg.childImageSharp.fluid}>
       <Banner
         title="Continue exploring"
         info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, officiis."
@@ -22,3 +22,15 @@ export default () => (
     <Services />
   </Layout>
 );
+
+export const getImage = graphql`
+  query {
+    homeImg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+      childImageSharp {
+        fluid(maxWidth: 4160, quality: 90) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`;
