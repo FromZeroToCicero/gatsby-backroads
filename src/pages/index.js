@@ -6,6 +6,7 @@ import { graphql } from "gatsby";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import About from "../components/Home/About";
 import Services from "../components/Home/Services";
+import FeaturedTours from "../components/Home/FeaturedTours";
 
 export default ({ data }) => (
   <Layout>
@@ -21,6 +22,7 @@ export default ({ data }) => (
     </SimpleHero>
     <About />
     <Services />
+    <FeaturedTours />
   </Layout>
 );
 

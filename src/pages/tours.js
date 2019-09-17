@@ -2,11 +2,13 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import SimpleHero from "../components/SimpleHero";
+import Tours from "../components/Tours/Tours";
 
 const tours = ({ data }) => {
   return (
     <Layout>
       <SimpleHero img={data.toursImg.childImageSharp.fluid} />
+      <Tours />
     </Layout>
   );
 };
