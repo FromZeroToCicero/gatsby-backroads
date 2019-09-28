@@ -2,11 +2,13 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import SimpleHero from "../components/SimpleHero";
+import BlogList from "../components/Blog/BlogList";
 
 const blog = ({ data }) => {
   return (
     <Layout>
       <SimpleHero img={data.blogImg.childImageSharp.fluid} />
+      <BlogList />
     </Layout>
   );
 };

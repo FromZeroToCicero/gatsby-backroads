@@ -7,9 +7,14 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import About from "../components/Home/About";
 import Services from "../components/Home/Services";
 import FeaturedTours from "../components/Home/FeaturedTours";
+import SEO from "../components/SEO";
 
 export default ({ data }) => (
   <Layout>
+    <SEO
+      title="Home"
+      description="This is a tours site for the passionate of traveling"
+    />
     <SimpleHero home="true" img={data.homeImg.childImageSharp.fluid}>
       <Banner
         title="Continue exploring"

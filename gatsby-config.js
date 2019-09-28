@@ -14,6 +14,9 @@ module.exports = {
     description:
       "Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure",
     author: "Mircea Sima",
+    twitterUsername: "@john_doe",
+    image: "/defaultBcg.jpeg",
+    siteUrl: "https://fromzerotocicero-backroads.netlify.com",
   },
   plugins: [
     {
@@ -34,5 +37,6 @@ module.exports = {
     `gatsby-plugin-transition-link`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    "gatsby-plugin-react-helmet",
   ],
 };
