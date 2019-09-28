@@ -3,10 +3,12 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import SimpleHero from "../components/SimpleHero";
 import BlogList from "../components/Blog/BlogList";
+import SEO from "../components/SEO";
 
 const blog = ({ data }) => {
   return (
     <Layout>
+      <SEO title="Blog" />
       <SimpleHero img={data.blogImg.childImageSharp.fluid} />
       <BlogList />
     </Layout>

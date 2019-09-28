@@ -5,6 +5,7 @@ import styles from "../styles/single-blog.module.css";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import Image from "gatsby-image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import SEO from "../components/SEO";
 
 const blogTemplate = ({ data }) => {
   const {
@@ -32,6 +33,7 @@ const blogTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={title} />
       <section className={styles.blog}>
         <div className={styles.center}>
           <h1>{title}</h1>
